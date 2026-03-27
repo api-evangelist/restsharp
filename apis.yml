@@ -1,0 +1,44 @@
+aid: restsharp
+name: RestSharp
+description: >-
+  RestSharp is a simple REST and HTTP API client library for .NET,
+  providing a fluent API for making HTTP requests with automatic
+  serialization and deserialization of request and response bodies.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - SDKs
+  - .NET
+  - HTTP Client
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/restsharp/refs/heads/main/apis.yml
+created: '2026-03-27'
+modified: '2026-03-27'
+specificationVersion: '0.19'
+apis:
+  - aid: restsharp:restsharp
+    name: RestSharp
+    description: >-
+      RestSharp is a simple REST and HTTP API client library for .NET,
+      providing a fluent API for making HTTP requests with automatic
+      serialization and deserialization of request and response bodies.
+    humanURL: https://restsharp.dev/
+    tags:
+      - SDKs
+      - .NET
+      - HTTP Client
+    properties:
+      - type: Documentation
+        url: https://restsharp.dev/docs/intro
+      - type: Getting Started
+        url: https://restsharp.dev/docs/getting-started
+common:
+  - type: Website
+    url: https://restsharp.dev/
+  - type: Documentation
+    url: https://restsharp.dev/docs/intro
+  - type: GitHub Organization
+    url: https://github.com/restsharp
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
