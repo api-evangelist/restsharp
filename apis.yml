@@ -7,9 +7,9 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - SDKs
   - .NET
   - HTTP Client
+  - SDKs
 url: >-
   https://raw.githubusercontent.com/api-evangelist/restsharp/refs/heads/main/apis.yml
 created: '2026-03-27'
@@ -24,9 +24,9 @@ apis:
       serialization and deserialization of request and response bodies.
     humanURL: https://restsharp.dev/
     tags:
-      - SDKs
       - .NET
       - HTTP Client
+      - SDKs
     properties:
       - type: Documentation
         url: https://restsharp.dev/docs/intro
