@@ -1,0 +1,14 @@
+{
+  "title": "Bearer Token Authentication with RestSharp",
+  "description": "Example showing how to configure RestSharp with a JWT Bearer token authenticator using RestClientOptions.",
+  "language": "csharp",
+  "version": "114.0.0",
+  "code": "using RestSharp;\nusing RestSharp.Authenticators;\n\nvar options = new RestClientOptions(\"https://api.example.com\")\n{\n    Authenticator = new JwtAuthenticator(\"your-access-token-here\")\n};\n\nvar client = new RestClient(options);\n\nvar request = new RestRequest(\"/protected/resource\");\nvar response = await client.GetAsync<Resource>(request);\n",
+  "output": {
+    "type": "Resource",
+    "example": {
+      "id": 1,
+      "data": "protected content"
+    }
+  }
+}

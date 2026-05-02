@@ -1,0 +1,171 @@
+name: RestSharp Vocabulary
+description: >-
+  Domain vocabulary for RestSharp, the .NET HTTP client library. Documents
+  core classes, methods, parameter types, authentication schemes, and
+  serialization concepts.
+tags:
+  - .NET
+  - HTTP Client
+  - Open Source
+  - Vocabulary
+created: '2026-05-02'
+modified: '2026-05-02'
+terms:
+  - term: RestClient
+    definition: >-
+      The primary class in RestSharp for executing HTTP requests. Wraps
+      HttpClient and accepts RestClientOptions for configuration. Thread-safe
+      and intended to be reused across requests.
+    tags:
+      - Core Class
+
+  - term: RestClientOptions
+    definition: >-
+      Configuration class passed to RestClient constructor. Defines base URL,
+      authenticator, timeout, redirect behavior, user agent, and HttpClient
+      handler settings.
+    tags:
+      - Configuration
+      - Core Class
+
+  - term: RestRequest
+    definition: >-
+      Represents a single HTTP request, including the resource path, HTTP
+      method, parameters, request body, and per-request timeout override.
+    tags:
+      - Core Class
+
+  - term: RestResponse
+    definition: >-
+      Contains the complete HTTP response: status code, headers, content,
+      cookies, and error information. RestResponse<T> includes a typed Data
+      property with the deserialized response body.
+    tags:
+      - Core Class
+
+  - term: IAuthenticator
+    definition: >-
+      Interface for pluggable authentication strategies in RestSharp.
+      Built-in implementations include JwtAuthenticator, OAuth1Authenticator,
+      OAuth2AuthorizationRequestHeaderAuthenticator, and HttpBasicAuthenticator.
+    tags:
+      - Authentication
+      - Interface
+
+  - term: JwtAuthenticator
+    definition: >-
+      Built-in IAuthenticator that adds a Bearer token to the Authorization
+      header of each request.
+    tags:
+      - Authentication
+
+  - term: OAuth1Authenticator
+    definition: >-
+      Built-in IAuthenticator implementing OAuth 1.0a request signing with
+      HMAC-SHA1.
+    tags:
+      - Authentication
+      - OAuth
+
+  - term: OAuth2AuthorizationRequestHeaderAuthenticator
+    definition: >-
+      Built-in IAuthenticator implementing OAuth 2.0 Bearer token
+      authentication via the Authorization header.
+    tags:
+      - Authentication
+      - OAuth
+
+  - term: HttpBasicAuthenticator
+    definition: >-
+      Built-in IAuthenticator implementing HTTP Basic authentication (Base64
+      encoded username:password in Authorization header).
+    tags:
+      - Authentication
+
+  - term: AddUrlSegment
+    definition: >-
+      RestRequest method for adding a path parameter that replaces a
+      {placeholder} token in the resource URL (ParameterType.UrlSegment).
+    tags:
+      - Parameters
+      - Method
+
+  - term: AddQueryParameter
+    definition: >-
+      RestRequest method for adding a query string parameter appended to the
+      URL.
+    tags:
+      - Parameters
+      - Method
+
+  - term: AddHeader
+    definition: >-
+      RestRequest method for adding a custom HTTP header to the request.
+    tags:
+      - Parameters
+      - Method
+
+  - term: AddJsonBody
+    definition: >-
+      RestRequest method for setting a JSON serialized object as the request
+      body, automatically sets Content-Type to application/json.
+    tags:
+      - Body
+      - Method
+      - Serialization
+
+  - term: GetAsync
+    definition: >-
+      RestClient extension method that executes a GET request and returns a
+      typed deserialized response. Throws RestRequestException on HTTP errors.
+    tags:
+      - Method
+
+  - term: PostJsonAsync
+    definition: >-
+      RestClient extension method that serializes a request object to JSON,
+      POSTs it, and deserializes the typed response. Shortcut for common
+      JSON API patterns.
+    tags:
+      - Method
+      - Serialization
+
+  - term: ExecuteAsync
+    definition: >-
+      Core RestClient method returning a RestResponse with error properties
+      (IsSuccessful, ErrorMessage) rather than throwing exceptions. Used when
+      you need to inspect error details.
+    tags:
+      - Method
+
+  - term: MergedParameters
+    definition: >-
+      RestResponse property (added in v114) providing the combined list of
+      all parameters from both the request and client defaults after merging.
+    tags:
+      - New in v114
+      - Response
+
+  - term: MultipartFormData
+    definition: >-
+      Request body format for file uploads and mixed form data. Set via
+      request.RequestFormat = DataFormat.MultipartFormData and AddFile().
+    tags:
+      - Body
+      - File Upload
+
+  - term: HttpClient
+    definition: >-
+      The underlying .NET system class that RestSharp wraps. Since RestSharp
+      v107, all HTTP operations are delegated to HttpClient. RestSharp manages
+      the HttpClient instance lifecycle.
+    tags:
+      - Infrastructure
+
+  - term: ParameterType
+    definition: >-
+      Enum defining where a parameter is placed in the HTTP request.
+      Values: UrlSegment, QueryString, HttpHeader, RequestBody, Cookie, GetOrPost.
+    tags:
+      - Enumeration
+      - Parameters

@@ -1,0 +1,15 @@
+{
+  "title": "POST JSON Request with RestSharp",
+  "description": "Example showing how to make a POST request with a JSON body using RestSharp's PostJsonAsync shortcut.",
+  "language": "csharp",
+  "version": "114.0.0",
+  "code": "using RestSharp;\n\nvar client = new RestClient(\"https://api.example.com\");\n\nvar newUser = new CreateUserRequest\n{\n    Name = \"John Smith\",\n    Email = \"john@example.com\"\n};\n\nvar created = await client.PostJsonAsync<CreateUserRequest, User>(\n    \"/users\",\n    newUser\n);\nConsole.WriteLine($\"Created user ID: {created.Id}\");\n",
+  "output": {
+    "type": "User",
+    "example": {
+      "id": 123,
+      "name": "John Smith",
+      "email": "john@example.com"
+    }
+  }
+}

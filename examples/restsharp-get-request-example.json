@@ -1,0 +1,15 @@
+{
+  "title": "Simple GET Request with RestSharp",
+  "description": "Example showing how to make a GET request with RestSharp and deserialize the JSON response into a typed C# object.",
+  "language": "csharp",
+  "version": "114.0.0",
+  "code": "using RestSharp;\n\nvar options = new RestClientOptions(\"https://api.example.com\");\nvar client = new RestClient(options);\n\nvar request = new RestRequest(\"/users/{id}\");\nrequest.AddUrlSegment(\"id\", 42);\n\nvar user = await client.GetAsync<User>(request);\nConsole.WriteLine($\"User: {user.Name}\");\n",
+  "output": {
+    "type": "User",
+    "example": {
+      "id": 42,
+      "name": "Jane Doe",
+      "email": "jane@example.com"
+    }
+  }
+}

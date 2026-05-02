@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "restsharp": "https://restsharp.dev/vocab/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "codemeta": "https://codemeta.github.io/terms/",
+
+    "RestClient": "restsharp:RestClient",
+    "RestRequest": "restsharp:RestRequest",
+    "RestResponse": "restsharp:RestResponse",
+    "RestClientOptions": "restsharp:RestClientOptions",
+    "Parameter": "restsharp:Parameter",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "version": "schema:version",
+    "url": "schema:url",
+    "license": "schema:license",
+    "codeRepository": {
+      "@id": "schema:codeRepository",
+      "@type": "@id"
+    },
+    "programmingLanguage": "schema:programmingLanguage",
+    "runtimePlatform": "schema:runtimePlatform",
+    "downloadUrl": {
+      "@id": "schema:downloadUrl",
+      "@type": "@id"
+    },
+    "releaseNotes": "schema:releaseNotes",
+    "datePublished": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:date"
+    },
+    "author": "schema:author",
+    "maintainer": "schema:maintainer",
+
+    "baseUrl": "restsharp:baseUrl",
+    "resource": "restsharp:resource",
+    "method": "restsharp:httpMethod",
+    "timeout": "restsharp:timeout",
+    "authenticator": "restsharp:authenticator",
+    "parameters": {
+      "@id": "restsharp:parameters",
+      "@container": "@list"
+    },
+    "requestFormat": "restsharp:requestFormat",
+    "statusCode": "restsharp:statusCode",
+    "isSuccessful": "restsharp:isSuccessful",
+    "errorMessage": "restsharp:errorMessage",
+    "content": "restsharp:content"
+  }
+}

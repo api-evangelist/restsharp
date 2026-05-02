@@ -1,0 +1,12 @@
+{
+  "name": "RestClientOptions",
+  "description": "Configuration options passed to RestClient constructor. Controls base URL, authentication, timeouts, redirects, and HTTP behavior.",
+  "fields": [
+    { "name": "baseUrl", "type": "string", "description": "Base URL for all requests", "required": false },
+    { "name": "authenticator", "type": "object", "description": "IAuthenticator implementation", "required": false },
+    { "name": "timeout", "type": "integer", "description": "Request timeout in milliseconds", "required": false },
+    { "name": "followRedirects", "type": "boolean", "description": "Auto-follow HTTP redirects (default: true)", "required": false },
+    { "name": "userAgent", "type": "string", "description": "User-Agent header value", "required": false },
+    { "name": "preAuthenticate", "type": "boolean", "description": "Send credentials on first request (default: false)", "required": false }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "RestRequest",
+  "description": "Represents a single HTTP request in RestSharp with resource path, method, parameters, body, and per-request timeout.",
+  "fields": [
+    { "name": "resource", "type": "string", "description": "Resource path relative to base URL", "required": true },
+    { "name": "method", "type": "string", "description": "HTTP method: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS", "required": false },
+    { "name": "parameters", "type": "array[Parameter]", "description": "Request parameters (path, query, header, body, cookie)", "required": false },
+    { "name": "timeout", "type": "integer", "description": "Request-level timeout override in ms", "required": false },
+    { "name": "requestFormat", "type": "string", "description": "Body serialization format: Json, Xml, MultipartFormData, UrlEncodedForm", "required": false },
+    { "name": "files", "type": "array[FileParameter]", "description": "Files for multipart requests", "required": false }
+  ]
+}

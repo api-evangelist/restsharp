@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://restsharp.dev/schemas/rest-request",
+  "title": "RestRequest",
+  "description": "Represents an HTTP request in RestSharp. Defines the resource path, HTTP method, parameters, body, and per-request options.",
+  "type": "object",
+  "properties": {
+    "resource": {
+      "type": "string",
+      "description": "Resource path relative to the client's base URL (e.g., /users/{id})"
+    },
+    "method": {
+      "type": "string",
+      "enum": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"],
+      "description": "HTTP method for the request. Default: GET"
+    },
+    "parameters": {
+      "type": "array",
+      "description": "List of parameters (path, query, header, cookie, form, body)",
+      "items": {
+        "$ref": "#/$defs/Parameter"
+      }
+    },
+    "timeout": {
+      "type": "integer",
+      "description": "Request-level timeout override in milliseconds"
+    },
+    "requestFormat": {
+      "type": "string",
+      "enum": ["Json", "Xml", "MultipartFormData", "UrlEncodedForm"],
+      "description": "Format for the request body serialization"
+    },
+    "files": {
+      "type": "array",
+      "description": "Files to include in a multipart form request",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "fileName": { "type": "string" },
+          "contentType": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "Parameter": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Parameter name"
+        },
+        "value": {
+          "description": "Parameter value"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["UrlSegment", "QueryString", "HttpHeader", "RequestBody", "Cookie", "GetOrPost"],
+          "description": "Where the parameter is placed in the request"
+        },
+        "contentType": {
+          "type": "string",
+          "description": "Content-Type for body parameters"
+        },
+        "encode": {
+          "type": "boolean",
+          "description": "Whether to URL-encode the parameter value"
+        }
+      },
+      "required": ["name", "type"]
+    }
+  }
+}
