@@ -41,20 +41,20 @@ apis:
     properties:
       - type: Documentation
         url: https://restsharp.dev/docs/intro/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://restsharp.dev/docs/intro/
       - type: GitHub
         url: https://github.com/restsharp/RestSharp
       - type: NuGet
         url: https://www.nuget.org/packages/RestSharp
-      - type: Changelog
+      - type: ChangeLog
         url: https://github.com/restsharp/RestSharp/releases
 common:
   - type: Website
     url: https://restsharp.dev/
   - type: Documentation
     url: https://restsharp.dev/docs/intro/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/restsharp
   - type: NuGet Package
     url: https://www.nuget.org/packages/RestSharp
