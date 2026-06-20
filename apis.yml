@@ -8,7 +8,7 @@ description: >-
   and multi-part form uploads. Available on NuGet as RestSharp (9,800+ GitHub
   stars, Apache-2.0 license, .NET Foundation project).
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - .NET
   - Apache License
