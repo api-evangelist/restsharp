@@ -27,6 +27,14 @@ tags:
   - C#
   - HTTP Client
   - NuGet
+  - Open-Source
+  - SDK
+tags_raw:
+  - .NET
+  - Apache License
+  - C#
+  - HTTP Client
+  - NuGet
   - Open Source
   - SDKs
 url: >-
@@ -45,6 +53,12 @@ apis:
       .NET Standard 2.0, and .NET Framework 4.7.1.
     humanURL: https://restsharp.dev/
     tags:
+      - .NET
+      - C#
+      - HTTP Client
+      - NuGet
+      - Open-Source
+    tags_raw:
       - .NET
       - C#
       - HTTP Client
