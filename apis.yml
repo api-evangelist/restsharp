@@ -9,15 +9,20 @@ description: >-
   stars, Apache-2.0 license, .NET Foundation project).
 type: Index
 deliveryModel:
-  model: unknown
-  open_source: false
+  model: self-hosted
+  license: Apache-2.0
+  license_evidence:
+    repo: restsharp/restsharp
+    spdx: Apache-2.0
+    stars: 9824
+  open_source: true
   commercial: false
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Self-hosted open source · you run it yourself
+  confidence: medium
   source:
-  - none
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -38,7 +43,7 @@ tags:
   - C#
   - HTTP Client
   - NuGet
-  - Open-Source
+  - Open Source
   - SDK
 tags_raw:
   - .NET
@@ -48,6 +53,7 @@ tags_raw:
   - NuGet
   - Open Source
   - SDKs
+  - Open-Source
 url: >-
   https://raw.githubusercontent.com/api-evangelist/restsharp/refs/heads/main/apis.yml
 created: '2026-03-27'
@@ -68,13 +74,14 @@ apis:
       - C#
       - HTTP Client
       - NuGet
-      - Open-Source
+      - Open Source
     tags_raw:
       - .NET
       - C#
       - HTTP Client
       - NuGet
       - Open Source
+      - Open-Source
     properties:
       - type: Documentation
         url: https://restsharp.dev/docs/intro/
