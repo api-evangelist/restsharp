@@ -57,7 +57,7 @@ tags_raw:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/restsharp/refs/heads/main/apis.yml
 created: '2026-03-27'
-modified: '2026-05-02'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
   - aid: restsharp:restsharp
@@ -94,6 +94,8 @@ apis:
       - type: ChangeLog
         url: https://github.com/restsharp/RestSharp/releases
 common:
+  - url: https://restsharp.dev/blog/
+    type: Blog
   - type: DomainSecurity
     url: security/restsharp-domain-security.yml
   - type: Website
