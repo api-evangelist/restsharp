@@ -94,6 +94,12 @@ apis:
       - type: ChangeLog
         url: https://github.com/restsharp/RestSharp/releases
 common:
+  - type: Plans
+    url: plans/restsharp-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/restsharp-rate-limits.yml
+  - type: FinOps
+    url: finops/restsharp-finops.yml
   - url: https://restsharp.dev/blog/
     type: Blog
   - type: DomainSecurity
