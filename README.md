@@ -64,85 +64,145 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-RestSharp is a simple REST and HTTP API client library for .NET that wraps HttpClient with a fluent API for making HTTP requests with automatic serialization and deserialization of request and response bodies. Used by developers building .NET applications that consume REST APIs. Apache-2.0 licensed, .NET Foundation project with 9,800+ GitHub stars.
+RestSharp is a simple REST and HTTP API client library for .NET that wraps HttpClient with a fluent API for making HTTP requests with automatic serialization and deserialization of request and response bodies. Supports JSON, XML, and CSV formats, OAuth1/OAuth2 authentication, async operations, and multi-part form uploads. Available on NuGet as RestSharp (9,800+ GitHub stars, Apache-2.0 license, .NET Foundation project).
 
-**Website:** [https://restsharp.dev/](https://restsharp.dev/)
-**GitHub:** [https://github.com/restsharp/RestSharp](https://github.com/restsharp/RestSharp)
-**NuGet:** [https://www.nuget.org/packages/RestSharp](https://www.nuget.org/packages/RestSharp)
-**Current Version:** 114.0.0 (released March 2026)
+**Areas:** .NET · Apache License · C# · HTTP Client · NuGet · Open Source · SDK
 
-## Library
+## RestSharp on APIs.io
 
-### RestSharp .NET Client Library
+Everything profiled for RestSharp is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/restsharp/](https://apis.io/providers/restsharp/)** — or go straight to one of the APIs or properties below.
 
-A fluent .NET HTTP client library supporting JSON, XML, and CSV serialization, OAuth1/OAuth2/JWT/Basic authentication, async operations, multipart file uploads, and comprehensive parameter management.
+### APIs (1)
 
-- **Documentation:** [https://restsharp.dev/docs/intro/](https://restsharp.dev/docs/intro/)
-- **GitHub:** [https://github.com/restsharp/RestSharp](https://github.com/restsharp/RestSharp)
-- **License:** Apache-2.0
-- **Target Frameworks:** .NET 8.0, .NET Standard 2.0, .NET Framework 4.7.1
+- [RestSharp](https://apis.io/apis/restsharp/restsharp/) — RestSharp is a simple REST and HTTP API client library for .NET, wrapping HttpClient with a fluent API for making HTTP requests with automatic serialization…
 
-## Common Properties
+### Published properties
 
-| Type | URL |
-|------|-----|
-| Website | https://restsharp.dev/ |
-| Documentation | https://restsharp.dev/docs/intro/ |
-| GitHub Organization | https://github.com/restsharp |
-| NuGet Package | https://www.nuget.org/packages/RestSharp |
-| License | Apache-2.0 |
-| Issue Tracker | https://github.com/restsharp/RestSharp/issues |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Artifacts
+#### JSON Schema (2)
 
-### JSON Schemas
+The data models the API reads and writes.
 
-| File | Description |
-|------|-------------|
-| [json-schema/restsharp-rest-client-options-schema.json](json-schema/restsharp-rest-client-options-schema.json) | RestClientOptions configuration schema |
-| [json-schema/restsharp-rest-request-schema.json](json-schema/restsharp-rest-request-schema.json) | RestRequest object schema |
+- [RestClientOptions](https://apis.io/schemas/restsharp/restsharp-rest-client-options/)
+- [RestRequest](https://apis.io/schemas/restsharp/restsharp-rest-request/)
 
-### JSON Structures
+#### JSON Structure (2)
 
-| File | Description |
-|------|-------------|
-| [json-structure/restsharp-rest-client-options-structure.json](json-structure/restsharp-rest-client-options-structure.json) | RestClientOptions field reference |
-| [json-structure/restsharp-rest-request-structure.json](json-structure/restsharp-rest-request-structure.json) | RestRequest field reference |
+Data models expressed in JSON Structure.
 
-### JSON-LD Context
+- [Restsharp Rest Client Options Structure](https://apis.io/json-structure/restsharp/restsharp-rest-client-options-structure/)
+- [Restsharp Rest Request Structure](https://apis.io/json-structure/restsharp/restsharp-rest-request-structure/)
 
-| File | Description |
-|------|-------------|
-| [json-ld/restsharp-context.jsonld](json-ld/restsharp-context.jsonld) | JSON-LD context for RestSharp library vocabulary |
+#### JSON-LD (1)
 
-### Examples
+Linked-data contexts for the provider's vocabulary.
 
-| File | Description |
-|------|-------------|
-| [examples/restsharp-get-request-example.json](examples/restsharp-get-request-example.json) | Simple typed GET request |
-| [examples/restsharp-post-json-example.json](examples/restsharp-post-json-example.json) | POST JSON body with typed response |
-| [examples/restsharp-bearer-auth-example.json](examples/restsharp-bearer-auth-example.json) | Bearer token authentication setup |
+- [Restsharp Context](https://apis.io/jsonld/restsharp/restsharp-context/)
 
-### Vocabulary
+#### Vocabulary (1)
 
-| File | Description |
-|------|-------------|
-| [vocabulary/restsharp-vocabulary.yml](vocabulary/restsharp-vocabulary.yml) | Domain vocabulary for RestSharp classes, methods, and concepts |
+The provider's domain terms, defined.
 
-## Quick Start
+- [RestSharp Vocabulary](https://apis.io/vocabularies/restsharp/restsharp-vocabulary/)
 
-```bash
-dotnet add package RestSharp
-```
+#### Examples (3)
 
-```csharp
-var options = new RestClientOptions("https://api.example.com");
-var client = new RestClient(options);
-var request = new RestRequest("/users/{id}");
-request.AddUrlSegment("id", 42);
-var user = await client.GetAsync<User>(request);
-```
+Example requests and responses.
 
-## Maintainers
+- [Restsharp Bearer Auth Example](https://apis.io/examples/restsharp/restsharp-bearer-auth-example/)
+- [Restsharp Get Request Example](https://apis.io/examples/restsharp/restsharp-get-request-example/)
+- [Restsharp Post Json Example](https://apis.io/examples/restsharp/restsharp-post-json-example/)
 
-- **Kin Lane** — kin@apievangelist.com
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [RestSharp — jsonschema rules](https://apis.io/rules/restsharp/restsharp-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Restsharp Domain Security](https://apis.io/security/restsharp/restsharp-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Restsharp Plans Pricing](https://apis.io/plans/restsharp/restsharp-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Restsharp Rate Limits](https://apis.io/rate-limits/restsharp/restsharp-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Restsharp Finops](https://apis.io/finops/restsharp/restsharp-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://restsharp.dev/)
+- [Documentation](https://restsharp.dev/docs/intro/)
+- [Support](https://github.com/restsharp/RestSharp/issues)
+- [Blog](https://restsharp.dev/blog/)
+- [GitHub](https://github.com/restsharp)
+
+## API Evangelist rating
+
+**Kin Score 19.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 10.7 |
+| Contract governance | 9.8 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/restsharp/](https://apis.io/providers/restsharp/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for RestSharp: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/restsharp/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
